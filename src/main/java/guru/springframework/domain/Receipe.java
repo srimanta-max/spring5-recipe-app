@@ -41,7 +41,7 @@ public class Receipe {
 	private Notes notes;
 	
 	@OneToMany(mappedBy = "receipe",cascade = CascadeType.ALL)
-	private Set<Ingredient> ingredient;
+	private Set<Ingredient> ingredients;
 	
 	@ManyToMany
 	@JoinTable(name = "receipe_category", 
@@ -115,11 +115,11 @@ public class Receipe {
 	public void setNotes(Notes notes) {
 		this.notes = notes;
 	}
-	public Set<Ingredient> getIngredient() {
-		return ingredient;
+	public Set<Ingredient> getIngredients() {
+		return ingredients;
 	}
-	public void setIngredient(Set<Ingredient> ingredient) {
-		this.ingredient = ingredient;
+	public void setIngredients(Set<Ingredient> ingredient) {
+		this.ingredients = ingredient;
 	}
 	public Set<Category> getCategory() {
 		return category;
